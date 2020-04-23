@@ -1,0 +1,25 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.MasterPageViewModel, SimpleDotvvmConcepts
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SimpleDotvvmConcepts</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <dot:RouteLink RouteName="Import" Text="Import" />
+            </li>
+            <li>
+                <dot:RouteLink RouteName="StaticCommand" Text="Static command" />
+            </li>
+        </ul>
+    </nav>
+ 	
+
+	<dot:ContentPlaceHolder ID="MainContent" />
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SimpleDotvvmConcepts/.vs/SimpleDotvvmConcepts/v16
+/SimpleDotvvmConcepts/.vs/SimpleDotvvmConcepts/config
+/SimpleDotvvmConcepts/SimpleDotvvmConcepts/bin/Debug/netcoreapp3.1
+/SimpleDotvvmConcepts/SimpleDotvvmConcepts/obj
+/SimpleDotvvmConcepts/SimpleDotvvmConcepts/.bowerrc
+/SimpleDotvvmConcepts/SimpleDotvvmConcepts/SimpleDotvvmConcepts.csproj.user
+/.vs

@@ -1,0 +1,17 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.ImportViewModel, SimpleDotvvmConcepts
+@masterPage Views/MasterPage.dotmaster
+@import SimpleDotvvmConcepts.Resources
+@import t = SimpleDotvvmConcepts.Resources.Texts
+
+	<dot:Content ContentPlaceHolderID="MainContent">
+		<h2>{{resource: Texts.ManeWolf}}</h2>
+		<h2>{{resource: t.Long}}</h2>
+		<h2>{{resource: t.OhWhy}}</h2>
+
+		<article>
+			<h3>Maned wolf</h3> <dot:Button Text="Show" Click="{staticCommand: ToggleWolf = !ToggleWolf}"/>
+			<section Visible="{value: ToggleWolf}">
+				<img src="img/maned-wolf-1.jpg" />
+			</section>
+		</article>		
+	</dot:Content>
