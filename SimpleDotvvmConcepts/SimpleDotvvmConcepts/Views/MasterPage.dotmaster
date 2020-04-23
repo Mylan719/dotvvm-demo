@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <title>SimpleDotvvmConcepts</title>
+    <dot:RequiredResource Name="styles"/>
 </head>
 <body>
     <nav>
@@ -14,6 +15,12 @@
             </li>
             <li>
                 <dot:RouteLink RouteName="StaticCommand" Text="Static command" />
+            </li>
+            <li>
+                <dot:RouteLink RouteName="Services" Text="Services" />
+            </li>
+            <li>
+                <dot:RouteLink RouteName="ServicesComparision" Text="Old Style" />
             </li>
         </ul>
     </nav>

@@ -1,0 +1,19 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.ServicesViewModel, SimpleDotvvmConcepts
+@masterPage Views/MasterPage.dotmaster
+@service quoteService = SimpleDotvvmConcepts.Services.QuoteService
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <section class="musk">
+        <h2>Musky quotes</h2>
+        <img src="img/normal.jpg" title="elon musk" />
+
+        <div>
+            <dot:TextBox Text="{value: NewQuote}" />
+            <dot:Button Text="Add" Click="{staticCommand: Quotes = quoteService.AddAsync(NewQuote).Result; NewQuote = ""}" />
+        </div>
+        <dot:Repeater WrapperTagName="ul" DataSource="{value: Quotes}">
+            <li>{{value: Id}} {{value: Text}}</li>
+        </dot:Repeater>
+    </section>
+</dot:Content>
+

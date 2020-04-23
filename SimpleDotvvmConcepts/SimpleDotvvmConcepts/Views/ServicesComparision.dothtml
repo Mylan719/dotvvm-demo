@@ -1,0 +1,17 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.ServicesComparisionViewModel, SimpleDotvvmConcepts
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <section class="musk">
+        <h2>Musk quotes</h2>
+        <img src="img/not-working-dolphin.jpg" title="dolphin not working" />
+        <div>
+            <dot:TextBox Text="{value: NewQuote}" />
+            <dot:Button Text="Add" Click="{command: AddAsync(NewQuote)}" />
+        </div>
+        <dot:Repeater WrapperTagName="ul" DataSource="{value: Quotes}">
+            <li>{{value: Id}} {{value: Text}}</li>
+        </dot:Repeater>
+    </section>
+</dot:Content>
+

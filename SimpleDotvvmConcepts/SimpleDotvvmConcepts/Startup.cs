@@ -8,6 +8,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Routing;
+using SimpleDotvvmConcepts.Services;
 
 namespace SimpleDotvvmConcepts
 {
@@ -22,6 +23,8 @@ namespace SimpleDotvvmConcepts
             services.AddAuthorization();
             services.AddWebEncoders();
             services.AddDotVVM<DotvvmStartup>();
+
+            services.AddTransient<QuoteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

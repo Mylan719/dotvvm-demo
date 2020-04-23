@@ -28,7 +28,9 @@ namespace SimpleDotvvmConcepts
 
         private void ConfigureResources(DotvvmConfiguration config, string applicationPath)
         {
-            // register custom resources and adjust paths to the built-in resources
+            config.Resources.Register("styles", new StylesheetResource() { 
+                Location = new FileResourceLocation("wwwroot/styles.css")
+            });
         }
 
 		public void ConfigureServices(IDotvvmServiceCollection options)
