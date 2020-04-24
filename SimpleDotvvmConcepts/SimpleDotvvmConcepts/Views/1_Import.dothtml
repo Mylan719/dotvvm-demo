@@ -4,7 +4,9 @@
 @import t = SimpleDotvvmConcepts.Resources.Texts
 
 	<dot:Content ContentPlaceHolderID="MainContent">
-		<h2>{{resource: Texts.ManeWolf}}</h2>
-		<h2>{{resource: t.Long}}</h2>
-		<h2>{{resource: t.OhWhy}}</h2>	
+		<section class="import">
+			<p InnerText={resource: SimpleDotvvmConcepts.Resources.Texts.ManeWolf} />
+			<p InnerText={resource: Texts.Long} />
+			<p InnerText={resource: t.OhWhy} />
+		</section>
 	</dot:Content>

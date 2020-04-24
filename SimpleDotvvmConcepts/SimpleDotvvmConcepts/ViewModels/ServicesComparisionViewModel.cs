@@ -29,6 +29,8 @@ namespace SimpleDotvvmConcepts.ViewModels
             if (!Context.IsPostBack && !RefreshQuotes)
             {
                 Quotes = await quoteService.LoadAsync();
+                //Often times for larger system here several grids and viewmodels would be loaded
+                //Regardles of them not having changed at all
             }
         }
 

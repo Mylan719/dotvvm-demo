@@ -15,5 +15,22 @@ namespace SimpleDotvvmConcepts.StaticComand
 
             return $"img/seal{(random.Next() % 4 + 1)}.jpg";
         }
+
+        [AllowStaticCommand]
+        public static async Task SnailCallAsync()
+        {
+            await Task.Delay(4000);
+        }
+
+        [AllowStaticCommand]
+        public static void Parameters(string body)
+        {
+        }
+
+        [AllowStaticCommand]
+        public static decimal RoundDown(decimal? number)
+        {
+            return Math.Floor(number?? 0);
+        }
     }
 }

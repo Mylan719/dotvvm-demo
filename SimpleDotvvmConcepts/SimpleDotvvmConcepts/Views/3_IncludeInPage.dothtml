@@ -1,0 +1,18 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.IncludeInPageViewModel, SimpleDotvvmConcepts
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <article>
+        <h2>
+            <dot:LinkButton Text="What's the most fake looking animal?" Click="{staticCommand: ToggleAnimal = !ToggleAnimal}" />
+        </h2>
+        <section Visible="{value: ToggleAnimal}">
+            <img src="img/giraffe.jpg" title="Giraffe" />
+        </section>
+        <section IncludeInPage="{value: ToggleAnimal}">
+            <img src="img/giraffe.jpg" title="Giraffe" />
+        </section>
+    </article>
+
+</dot:Content>
+

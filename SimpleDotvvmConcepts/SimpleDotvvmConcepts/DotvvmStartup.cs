@@ -17,7 +17,7 @@ namespace SimpleDotvvmConcepts
 
         private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)
         {
-            config.RouteTable.Add("Import", "", "Views/Import.dothtml");
+            config.RouteTable.Add("Import", "", "Views/1_Import.dothtml");
             config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));    
         }
 

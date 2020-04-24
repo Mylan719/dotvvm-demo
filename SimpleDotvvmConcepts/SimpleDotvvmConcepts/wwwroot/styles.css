@@ -1,10 +1,45 @@
 ﻿body {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
-h1,h2,h3,h4{
+h1, h2, h3, h4 {
     font-family: Arial;
+    color: rgb(55,115,194);
 }
 
-section.musk > img {
-    width:200px;
+
+
+section {
+    margin: 0.5rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    background-color: #f5f5f5;
+}
+
+    section > img {
+        width: 300px;
+    }
+
+    content{
+        margin:0;
+        padding:0;
+    }
+
+section.import p {
+    color: rgb(55,115,194);
+    font-weight:600;
+}
+nav {
+    background-color: #f5f5fe;
+    color: #f5f5f5;
+    padding: 1rem;
+    margin: 0;
+}
+
+ul > li {
+    list-style-type: none;
 }

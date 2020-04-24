@@ -70,7 +70,7 @@ namespace SimpleDotvvmConcepts.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ManeWolf.
+        ///   Looks up a localized string similar to Mane wolf.
         /// </summary>
         public static string ManeWolf {
             get {
@@ -79,7 +79,7 @@ namespace SimpleDotvvmConcepts.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Oh whyyy? leeggy too long.
+        ///   Looks up a localized string similar to Oh whyyy? Leeggy too long..
         /// </summary>
         public static string OhWhy {
             get {

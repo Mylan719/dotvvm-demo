@@ -11,22 +11,26 @@
     <nav>
         <ul>
             <li>
-                <dot:RouteLink RouteName="Import" Text="Import" />
+                <dot:RouteLink RouteName="1_Import" Text="Import" />
             </li>
             <li>
-                <dot:RouteLink RouteName="StaticCommand" Text="Static command" />
+                <dot:RouteLink RouteName="2_StaticCommand" Text="Static command" />
             </li>
             <li>
-                <dot:RouteLink RouteName="Services" Text="Services" />
+                <dot:RouteLink RouteName="3_IncludeInPage" Text="InclideInPage vs. Visible" />
             </li>
             <li>
-                <dot:RouteLink RouteName="ServicesComparision" Text="Old Style" />
+                <dot:RouteLink RouteName="4_Services" Text="Services" />
+            </li>
+            <li>
+                <dot:RouteLink RouteName="4a_ServicesComparision" Text="Old Style" />
             </li>
         </ul>
     </nav>
  	
-
-	<dot:ContentPlaceHolder ID="MainContent" />
+    <content>
+        <dot:ContentPlaceHolder ID="MainContent" />
+    </content>
 
 </body>
 </html>

@@ -11,5 +11,10 @@ namespace SimpleDotvvmConcepts.ViewModels
     {
         public bool ToggleWolf { get; set; }
         public string SealUrl { get; set; }
+        public string SnailText { get; set; }
+
+        public decimal BeamLength { get; set; }
+        public decimal Pieces { get; set; }
+        public decimal PieceLenght { get; set; }
     }
 }

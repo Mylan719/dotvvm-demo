@@ -34,66 +34,70 @@
   "routes": {
     "Import": {
       "url": "",
-      "virtualPath": "Views/Import.dothtml",
+      "virtualPath": "Views/1_Import.dothtml",
       "defaultValues": {}
     },
-    "Services": {
-      "url": "Services",
-      "virtualPath": "Views/Services.dothtml",
+    "1_Import": {
+      "url": "1_Import",
+      "virtualPath": "Views/1_Import.dothtml",
       "defaultValues": {}
     },
-    "ServicesComparision": {
-      "url": "ServicesComparision",
-      "virtualPath": "Views/ServicesComparision.dothtml",
+    "2_StaticCommand": {
+      "url": "2_StaticCommand",
+      "virtualPath": "Views/2_StaticCommand.dothtml",
       "defaultValues": {}
     },
-    "StaticCommand": {
-      "url": "StaticCommand",
-      "virtualPath": "Views/StaticCommand.dothtml",
+    "3_IncludeInPage": {
+      "url": "3_IncludeInPage",
+      "virtualPath": "Views/3_IncludeInPage.dothtml",
+      "defaultValues": {}
+    },
+    "4a_ServicesComparision": {
+      "url": "4a_ServicesComparision",
+      "virtualPath": "Views/4a_ServicesComparision.dothtml",
+      "defaultValues": {}
+    },
+    "4_Services": {
+      "url": "4_Services",
+      "virtualPath": "Views/4_Services.dothtml",
       "defaultValues": {}
     }
   },
   "resources": {
-    "StylesheetResource": {
-      "dotvvm.fileUpload-css": {
-        "Location": {
-          "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
-          "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
-          "Name": "DotVVM.Framework.Resources.Scripts.DotVVM.FileUpload.css",
-          "DebugFilePath": null
-        },
-        "LocationFallback": null,
-        "MimeType": "text/css",
-        "VerifyResourceIntegrity": false,
-        "IntegrityHash": null,
-        "Dependencies": [],
-        "RenderPosition": 0
-      },
-      "styles": {
-        "Location": {
-          "$type": "DotVVM.Framework.ResourceManagement.FileResourceLocation, DotVVM.Framework",
-          "FilePath": "wwwroot/styles.css"
-        },
-        "LocationFallback": null,
-        "MimeType": "text/css",
-        "VerifyResourceIntegrity": false,
-        "IntegrityHash": null,
-        "Dependencies": [],
-        "RenderPosition": 0
-      }
-    },
-    "DotVVM.Framework.ResourceManagement.PolyfillResource": {
-      "dotvvm.polyfill": {
-        "Dependencies": [],
-        "RenderPosition": 1
-      }
-    },
     "ScriptResource": {
       "dotvvm.polyfill.bundle": {
         "Location": {
           "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
           "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
           "Name": "DotVVM.Framework.Resources.Scripts.Polyfills.polyfill.bundle.js",
+          "DebugFilePath": null
+        },
+        "LocationFallback": null,
+        "MimeType": "text/javascript",
+        "VerifyResourceIntegrity": false,
+        "IntegrityHash": null,
+        "Dependencies": [],
+        "RenderPosition": 1
+      },
+      "globalize": {
+        "Location": {
+          "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
+          "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
+          "Name": "DotVVM.Framework.Resources.Scripts.Globalize.globalize.min.js",
+          "DebugFilePath": null
+        },
+        "LocationFallback": null,
+        "MimeType": "text/javascript",
+        "VerifyResourceIntegrity": false,
+        "IntegrityHash": null,
+        "Dependencies": [],
+        "RenderPosition": 1
+      },
+      "knockout": {
+        "Location": {
+          "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
+          "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
+          "Name": "DotVVM.Framework.Resources.Scripts.knockout-latest.js",
           "DebugFilePath": null
         },
         "LocationFallback": null,
@@ -135,37 +139,43 @@
           "dotvvm"
         ],
         "RenderPosition": 1
-      },
-      "globalize": {
+      }
+    },
+    "stylesheets": {
+      "dotvvm.fileUpload-css": {
         "Location": {
           "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
           "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
-          "Name": "DotVVM.Framework.Resources.Scripts.Globalize.globalize.min.js",
+          "Name": "DotVVM.Framework.Resources.Scripts.DotVVM.FileUpload.css",
           "DebugFilePath": null
         },
         "LocationFallback": null,
-        "MimeType": "text/javascript",
+        "MimeType": "text/css",
         "VerifyResourceIntegrity": false,
         "IntegrityHash": null,
         "Dependencies": [],
-        "RenderPosition": 1
+        "RenderPosition": 0
       },
-      "knockout": {
+      "styles": {
         "Location": {
-          "$type": "DotVVM.Framework.ResourceManagement.EmbeddedResourceLocation, DotVVM.Framework",
-          "Assembly": "DotVVM.Framework, Version=2.4.0.1, Culture=neutral, PublicKeyToken=23f3607db32275da",
-          "Name": "DotVVM.Framework.Resources.Scripts.knockout-latest.js",
-          "DebugFilePath": null
+          "$type": "DotVVM.Framework.ResourceManagement.FileResourceLocation, DotVVM.Framework",
+          "FilePath": "wwwroot/styles.css"
         },
         "LocationFallback": null,
-        "MimeType": "text/javascript",
+        "MimeType": "text/css",
         "VerifyResourceIntegrity": false,
         "IntegrityHash": null,
+        "Dependencies": [],
+        "RenderPosition": 0
+      }
+    },
+    "DotVVM.Framework.ResourceManagement.PolyfillResource": {
+      "dotvvm.polyfill": {
         "Dependencies": [],
         "RenderPosition": 1
       }
     },
-    "DotVVM.Framework.ResourceManagement.InlineScriptResource": {
+    "InlineScriptResource": {
       "dotvvm": {
         "Code": "if (window.dotvvm) { throw 'DotVVM is already loaded!'; } window.dotvvm = new DotVVM();",
         "Dependencies": [
