@@ -4,6 +4,7 @@
 <!--Just call of a static method-->
     <dot:Content ContentPlaceHolderID="MainContent">
         <section>
+            <%-- Most common use of static binding --%>
             <h3>Maned wolf</h3> <dot:Button Text="Toggle" Click="{staticCommand: ToggleWolf = !ToggleWolf}" />
             <section Visible="{value: ToggleWolf}">
                 <img src="img/maned-wolf-1.jpg" />
@@ -11,6 +12,7 @@
         </section>
 
         <section>
+            <%-- Calling simple static method updating property with the result--%>
             <h2>Seal</h2>
             <div>
                 <dot:Button Text="Gimme seal" Click="{staticCommand: SealUrl = demo.GetRandomFunnyAnimalUrl()}" />
@@ -22,6 +24,8 @@
         </section>
 
         <section>
+            <%-- Notice that BeamLength/PieceLenght is resolved on client and only one number is sent to server --%>
+            <%-- Also only single result returns --%>
             <h2>Let's cut a beam into pieces</h2>
             <p>
                 <label>Beam length:</label> <dot:TextBox UpdateTextAfterKeydown Changed="{staticCommand: Pieces = demo.RoundDown(BeamLength/PieceLenght)}" Text="{value: BeamLength}" />
@@ -35,12 +39,17 @@
         </section>
 
         <section>
+            <p IncludeInPage="{value: SnailText != null}" InnerText="{value: SnailText ?? "..."}" />
+            <%-- Notice that all blocks are updated at the same time --%>
             <h2>Binding blocks in staticCommand</h2>
             <dot:Button Text="Start" Click="{staticCommand: demo.SnailCallAsync(); SnailText = "It's finished. It's done." }" />
 
+            <%-- All binding data is updated at once once the longest lasting operation has completed --%>
+            <dot:Button Text="Start - Not what you Think" Click="{staticCommand: SnailText = "Started..."; demo.SnailCallAsync(); SnailText = "It's finished. It's done." }" />
+
+            <%-- I should not show this but since parameters are evaluated first... --%>
             <dot:Button Text="Start Parameters" Click="{staticCommand: demo.Parameters(SnailText = "Started..."); demo.SnailCallAsync(); SnailText = "It's finished. It's done." }" />
 
-            <p IncludeInPage="{value: SnailText != null}" InnerText="{value: SnailText ?? "..."}" />
         </section>
     </dot:Content>
 

@@ -17,7 +17,7 @@
                 <dot:RouteLink RouteName="2_StaticCommand" Text="Static command" />
             </li>
             <li>
-                <dot:RouteLink RouteName="3_IncludeInPage" Text="InclideInPage vs. Visible" />
+                <dot:RouteLink RouteName="3_IncludeInPage" Text="IncludeInPage vs. Visible" />
             </li>
             <li>
                 <dot:RouteLink RouteName="4_Services" Text="Services" />
@@ -25,9 +25,12 @@
             <li>
                 <dot:RouteLink RouteName="4a_ServicesComparision" Text="Old Style" />
             </li>
+            <li>
+                <dot:RouteLink RouteName="5_BigData" Text="Big Data" />
+            </li>
         </ul>
     </nav>
- 	
+    
     <content>
         <dot:ContentPlaceHolder ID="MainContent" />
     </content>

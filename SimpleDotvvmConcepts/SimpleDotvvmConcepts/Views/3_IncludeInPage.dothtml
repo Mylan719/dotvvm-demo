@@ -6,6 +6,7 @@
         <h2>
             <dot:LinkButton Text="What's the most fake looking animal?" Click="{staticCommand: ToggleAnimal = !ToggleAnimal}" />
         </h2>
+        <%-- Look in the DOM on client --%>
         <section Visible="{value: ToggleAnimal}">
             <img src="img/giraffe.jpg" title="Giraffe" />
         </section>

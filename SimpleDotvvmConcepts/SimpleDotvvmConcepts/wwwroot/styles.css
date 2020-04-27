@@ -29,6 +29,11 @@ section {
         padding:0;
     }
 
+    section.big{
+        height:300px;
+        overflow:scroll;
+    }
+
 section.import p {
     color: rgb(55,115,194);
     font-weight:600;

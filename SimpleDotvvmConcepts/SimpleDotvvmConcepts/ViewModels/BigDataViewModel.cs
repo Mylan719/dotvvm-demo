@@ -7,7 +7,7 @@ using SimpleDotvvmConcepts.Services;
 
 namespace SimpleDotvvmConcepts.ViewModels
 {
-    public class ServicesViewModel : MasterPageViewModel
+    public class BigDataViewModel : MasterPageViewModel
     {
         private readonly QuoteService quoteService;
 
@@ -16,7 +16,9 @@ namespace SimpleDotvvmConcepts.ViewModels
         public string NewQuote { get; set; }
         public Quote EditQuote { get; set; }
 
-        public ServicesViewModel(QuoteService quoteService)
+        public PeopleDialogViewModel PeopleDialogViewModel { get; set; }
+
+        public BigDataViewModel(QuoteService quoteService)
         {
             this.quoteService = quoteService;
         }

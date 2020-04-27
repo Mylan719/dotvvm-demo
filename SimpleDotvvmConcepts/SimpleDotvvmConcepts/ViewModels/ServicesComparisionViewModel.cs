@@ -26,7 +26,7 @@ namespace SimpleDotvvmConcepts.ViewModels
 
         public override async Task PreRender()
         {
-            if (!Context.IsPostBack && !RefreshQuotes)
+            if (!Context.IsPostBack || RefreshQuotes)
             {
                 Quotes = await quoteService.LoadAsync();
                 //Often times for larger system here several grids and viewmodels would be loaded

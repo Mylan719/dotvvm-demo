@@ -24,6 +24,7 @@ namespace SimpleDotvvmConcepts
             services.AddWebEncoders();
             services.AddDotVVM<DotvvmStartup>();
 
+            services.AddTransient<PeopleService>();
             services.AddTransient<QuoteService>();
         }
 

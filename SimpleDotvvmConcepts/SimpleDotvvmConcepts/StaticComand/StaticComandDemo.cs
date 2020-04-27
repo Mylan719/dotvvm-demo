@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleDotvvmConcepts.StaticComand
 {
+    //Usable from DotVVM 2.0
     public class StaticComandDemo
     {
         [AllowStaticCommand]
@@ -23,7 +24,7 @@ namespace SimpleDotvvmConcepts.StaticComand
         }
 
         [AllowStaticCommand]
-        public static void Parameters(string body)
+        public static void Parameters<T>(T body)
         {
         }
 

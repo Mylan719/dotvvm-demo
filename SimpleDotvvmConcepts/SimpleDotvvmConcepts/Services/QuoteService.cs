@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 
 namespace SimpleDotvvmConcepts.Services
 {
+    //This should not be facade, this should have facade as dependency
     public class QuoteService
     {
         public string FilePath { get; } = "Data/quotes.json";

@@ -1,0 +1,36 @@
+﻿@viewModel SimpleDotvvmConcepts.ViewModels.BigDataViewModel, SimpleDotvvmConcepts
+@masterPage Views/MasterPage.dotmaster
+@service quoteService = SimpleDotvvmConcepts.Services.QuoteService
+@service peopleService = SimpleDotvvmConcepts.Services.PeopleService
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <dot:Button Text="I never thought I would need so many people..."
+                Click={staticCommand: PeopleDialogViewModel = peopleService.LoadDialogAsync().Result} />
+
+    <section class="big" IncludeInPage="{value: PeopleDialogViewModel != null}">
+        <dot:Button Text="X" Click="{staticCommand: PeopleDialogViewModel=null}" />
+        <dot:GridView DataSource="{value: PeopleDialogViewModel.People}">
+            <Columns>
+                <dot:GridViewTextColumn HeaderText="Name" ValueBinding="{value: Name}" />
+                <dot:GridViewTextColumn HeaderText="Age" ValueBinding="{value: Age}" />
+                <dot:GridViewTextColumn HeaderText="Email" ValueBinding="{value: Email}" />
+                <dot:GridViewTextColumn HeaderText="Company" ValueBinding="{value: Company}" />
+            </Columns>
+        </dot:GridView>
+    </section>
+
+    <section class="musk">
+        <h2>Musky quotes</h2>
+        <img src="img/normal.jpg" title="elon musk" />
+
+        <div>
+            <dot:TextBox Text="{value: NewQuote}" />
+            <dot:Button Text="Add" Click="{command: Quotes = quoteService.AddAsync(NewQuote).Result; NewQuote = ""}" />
+        </div>
+        <dot:Repeater WrapperTagName="ul" DataSource="{value: Quotes}">
+            <li>{{value: Id}} {{value: Text}}</li>
+        </dot:Repeater>
+    </section>
+
+</dot:Content>
+
